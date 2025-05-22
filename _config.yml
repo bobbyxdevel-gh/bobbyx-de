@@ -1,0 +1,7 @@
+title: bobbyx.de
+email: contact@bobbyxdev.xyz
+description: >- # this means to ignore newlines until "baseurl:"
+  bobbyx.de
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://homepage.bobbyx.de" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  bobbyxdevel-gh
