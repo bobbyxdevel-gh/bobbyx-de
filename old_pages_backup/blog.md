@@ -7,7 +7,7 @@ title: Blog
 
 Welcome to my blog! Posts coming soon.
 
-If you are looking for posts, check the [blog index](/bobbyx-de/blog/) or see the latest below.
+If you are looking for posts, check the [blog index]({{ '/blog/' | relative_url }}) or see the latest below.
 
 <ul>
   {% for post in site.posts %}
