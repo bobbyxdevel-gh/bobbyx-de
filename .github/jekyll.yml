@@ -13,6 +13,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Cache Ruby gems
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:

@@ -12,15 +12,16 @@
     <div class="container">
         <header>
             <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+            <button id="darkModeToggle" aria-label="Toggle dark mode" style="float:right;margin-top:10px;">🌙</button>
             <nav>
                 <ul>
-                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                    <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-                    <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
-                    <li><a href="{{ '/projects.html' | relative_url }}">Projects</a></li>
-                    <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-                    <li><a href="{{ '/wiki.html' | relative_url }}">Wiki</a></li>
-                    <li><a href="{{ '/dotfiles.html' | relative_url }}">Dotfiles</a></li>
+                    <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
+                    <li><a href="{{ '/about.html' | relative_url }}" class="{% if page.url == '/about.html' %}active{% endif %}">About</a></li>
+                    <li><a href="{{ '/blog.html' | relative_url }}" class="{% if page.url == '/blog.html' %}active{% endif %}">Blog</a></li>
+                    <li><a href="{{ '/projects.html' | relative_url }}" class="{% if page.url == '/projects.html' %}active{% endif %}">Projects</a></li>
+                    <li><a href="{{ '/contact.html' | relative_url }}" class="{% if page.url == '/contact.html' %}active{% endif %}">Contact</a></li>
+                    <li><a href="{{ '/wiki.html' | relative_url }}" class="{% if page.url == '/wiki.html' %}active{% endif %}">Wiki</a></li>
+                    <li><a href="{{ '/dotfiles.html' | relative_url }}" class="{% if page.url == '/dotfiles.html' %}active{% endif %}">Dotfiles</a></li>
                 </ul>
             </nav>
         </header>
@@ -31,6 +32,18 @@
 
         <footer>
             <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
+            <script>
+            // Dark mode toggle
+            const toggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+            if (localStorage.getItem('darkMode') === 'true') {
+                body.classList.add('dark-mode');
+            }
+            toggle.onclick = function() {
+                body.classList.toggle('dark-mode');
+                localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+            };
+            </script>
         </footer>
     </div>
 </body>

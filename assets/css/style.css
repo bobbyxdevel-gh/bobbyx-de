@@ -58,6 +58,48 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+nav ul li a.active {
+    font-weight: bold;
+    color: #222;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #181a1b;
+    color: #e0e0e0;
+}
+body.dark-mode .container {
+    background-color: #23272a;
+    color: #e0e0e0;
+}
+body.dark-mode header,
+body.dark-mode footer {
+    border-color: #333;
+    color: #aaa;
+}
+body.dark-mode nav ul li a {
+    color: #66aaff;
+}
+body.dark-mode nav ul li a.active {
+    color: #fff;
+    border-bottom: 2px solid #66aaff;
+}
+
+/* Responsive improvements */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    nav ul li {
+        display: block;
+        margin: 8px 0;
+    }
+    header, footer {
+        padding: 10px 0;
+    }
+}
+
 main {
     flex-grow: 1; /* Ensures main content takes available space, pushing footer down */
 }
