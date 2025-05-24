@@ -3,6 +3,8 @@ layout: default
 title: Home
 ---
 
-# Welcome to Jekyll!
+# Welcome to {{ site.title }}
 
-This is a simple Jekyll site.
+Hi, I'm {{ site.author }}. This is my personal spot on the web. 
+
+Feel free to look around!
