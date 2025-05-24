@@ -6,3 +6,33 @@ author: bobbyxdevel
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bobbyxdevel-gh.github.io/bobbyx-de/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  bobbyxdevel-gh
+permalink: pretty
+theme: jekyll-theme-chirpy
+lang: en
+timezone: Europe/Berlin
+
+# Social links
+github:
+  username: bobbyxdevel-gh
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-include-cache
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE
